@@ -29,6 +29,8 @@ dependencies {
 
     //if you want to use Picasso for loading images
     compile 'agency.tango.android:avatar-view-picasso:{latest_release}'
+    //if you want to use Glide for loading images
+    compile 'agency.tango.android:avatar-view-glide:{latest_release}'
 }
 ```
 
@@ -122,7 +124,7 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
     binding.setUser(new User("User Name", "http:/example.com/user/someUserAvatar.png"));
 }
 
-private class ExampleDataComponent implements DataBindingComponent {
+private static class ExampleDataComponent implements DataBindingComponent {
     public AvatarViewBindings getAvatarViewBindings() {
         return new AvatarViewBindings(new PicassoLoader());
     }
@@ -154,7 +156,20 @@ class methods/constructors.
 - Placeholder letters are currently always white (in future user will be able to choose a different color).
 - It is recommended to set your default placeholder ```String``` as short as possible (the best would be one letter).
 
-####Feel free to create issues and pull requests!
+## Getting Help
+
+To report a specific problem or feature request, [open a new issue on Github](https://github.com/TangoAgency/avatar-view/issues/new).
+
+## Company
+
+[![Facebook](https://github.com/TangoAgency/avatar-view/blob/master/images/facebook.png)](https://www.facebook.com/TangoDigitalAgency)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Twitter](https://github.com/TangoAgency/avatar-view/blob/master/images/twitter.png)](https://twitter.com/Tango_Agency)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![LinkedIn](https://github.com/TangoAgency/avatar-view/blob/master/images/linkedin.png)](https://www.linkedin.com/company/tango-digital-agency)
+
+[Here](https://github.com/TangoAgency/) you can see open source work developed by Tango Agency.
+
+Whether you're searching for a new partner or trusted team for creating your new great product we are always ready to start work with you. 
+
+You can contact us via contact@tango.agency.
+Thanks in advance. 
 
  [Matt Precious's Lecture]: <https://www.youtube.com/watch?v=KH8Ldp39TUk>
  [FirstExample]: <https://github.com/TangoAgency/avatar-view/blob/master/images/example1.gif>
